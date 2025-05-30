@@ -4,46 +4,109 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Grimper pour Demain</title>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: sans-serif;
+      font-family: 'Raleway', sans-serif;
       line-height: 1.6;
+      background-color: #ffffff;
+      color: #333;
     }
     header {
-      background-image: url('images/image-bus.jpg');
+      background-image: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('images/image-bus.jpg');
       background-size: cover;
       background-position: center;
       color: white;
       text-align: center;
       padding: 120px 20px;
     }
+    header h1 {
+      font-size: 3em;
+      margin: 0;
+    }
     nav {
       display: flex;
       justify-content: center;
       gap: 20px;
-      background: #222;
-      padding: 10px;
+      background: #1a3d2f;
+      padding: 15px;
     }
     nav a {
       color: white;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 700;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #a3e635;
     }
     section {
-      padding: 40px 20px;
-      max-width: 800px;
+      padding: 60px 20px;
+      max-width: 1000px;
       margin: auto;
+      background: #fff;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+      border-radius: 12px;
     }
     h2 {
-      color: #204d3a;
+      color: #1a3d2f;
+      border-bottom: 2px solid #a3e635;
+      padding-bottom: 8px;
+      font-size: 2em;
     }
-    .video-placeholder {
-      background: #ddd;
-      padding: 20px;
+    .video-placeholder, .image-block {
+      margin: 30px 0;
       text-align: center;
-      margin: 20px 0;
-      border: 2px dashed #aaa;
+    }
+    .image-block img {
+      max-width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .super-grimpeur {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .super-grimpeur img {
+      max-width: 200px;
+      border-radius: 50%;
+      margin-top: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 20px;
+    }
+    .contact-form input, .contact-form textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1em;
+    }
+    .contact-form button {
+      padding: 10px;
+      background-color: #1a3d2f;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .contact-form button:hover {
+      background-color: #a3e635;
+      color: #1a3d2f;
+    }
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: #1a3d2f;
+      color: white;
     }
   </style>
 </head>
@@ -58,35 +121,65 @@
     <a href="#actions">Nos Actions</a>
     <a href="#evenement">Événement</a>
     <a href="#temoignages">Témoignages</a>
+    <a href="#super-grimpeur">Super Grimpeur</a>
     <a href="#contact">Contact</a>
   </nav>
 
   <section id="projet">
     <h2>Le Projet</h2>
     <p>Grimper pour Demain est une initiative portée par Roc Évasion Annecy visant à réinventer notre manière d'accéder aux falaises en favorisant la mobilité douce (vélo, bus) et en sensibilisant à la préservation des milieux naturels.</p>
+    <div class="image-block">
+      <img src="images/projet.jpg" alt="Grimpe et nature">
+    </div>
   </section>
 
   <section id="actions">
     <h2>Nos Actions</h2>
     <p>Carte des falaises accessibles à vélo, actions de sensibilisation sur le terrain, partenariats avec la LPO pour découvrir la biodiversité locale, et stage de grimpe engagé avec les jeunes.</p>
+    <div class="image-block">
+      <img src="images/actions.jpg" alt="Grimpe à vélo">
+    </div>
   </section>
 
   <section id="evenement">
     <h2>Clôture du projet – Fête de la Science</h2>
     <p>Le 5 octobre, venez découvrir le teaser du projet, rencontrer Nolwen Berthier, grimpeuse engagée, et Julien Roux, highliner professionnel. Un moment fort pour rêver, grimper, et s'engager ensemble.</p>
     <div class="video-placeholder">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/99aFmOM7-Ts" frameborder="0" allowfullscreen></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/99aFmOM7-Ts" frameborder="0" allowfullscreen></iframe>
     </div>
   </section>
 
   <section id="temoignages">
     <h2>Témoignages</h2>
     <p>Des jeunes du stage, des membres du club et des partenaires partagent leurs expériences de grimpe douce, entre plaisir, engagement et découverte du territoire.</p>
+    <div class="image-block">
+      <img src="images/temoignages.jpg" alt="Participants partageant leurs expériences">
+    </div>
+  </section>
+
+  <section id="super-grimpeur">
+    <h2>Super Grimpeur</h2>
+    <div class="super-grimpeur">
+      <p>Chaque mois, découvrez un grimpeur ou une grimpeuse engagé·e pour l'environnement, la transmission et l'aventure. À l'honneur ce mois-ci :</p>
+      <h3>Nolwen Berthier</h3>
+      <p>Grimpeuse de haut niveau et ambassadrice d'une pratique responsable, Nolwen inspire une nouvelle génération de grimpeurs conscients et passionnés.</p>
+      <img src="images/nolwen.jpg" alt="Portrait de Nolwen Berthier">
+    </div>
   </section>
 
   <section id="contact">
     <h2>Contact</h2>
     <p>Pour nous contacter ou nous soutenir, écrivez à : contact@grimperpourdemain.fr</p>
+    <form class="contact-form">
+      <input type="text" name="name" placeholder="Votre nom">
+      <input type="email" name="email" placeholder="Votre e-mail">
+      <textarea name="message" rows="5" placeholder="Votre message..."></textarea>
+      <button type="submit">Envoyer</button>
+    </form>
   </section>
+
+  <footer>
+    &copy; 2025 Grimper pour Demain – Roc Évasion Annecy
+  </footer>
 </body>
 </html>
