@@ -13,17 +13,30 @@
       background-color: #ffffff;
       color: #333;
     }
-    header {
-      background-image: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('Images/Escalade_17-11-24_Tom_Apeloig_Web-53.jpg');
-      background-size: cover;
-      background-position: center;
-      color: white;
-      text-align: center;
-      padding: 120px 20px;
+    #bg-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
     }
-    header h1 {
-      font-size: 3em;
-      margin: 0;
+    header {
+      position: relative;
+      height: 80vh;
+      overflow: hidden;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    header .overlay {
+      z-index: 1;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.4);
+      border-radius: 8px;
     }
     nav {
       display: flex;
