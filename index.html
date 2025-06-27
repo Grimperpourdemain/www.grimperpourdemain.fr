@@ -153,6 +153,31 @@
   66% { transform: translateX(-200%); }
   100% { transform: translateX(0); }
 }
+
+    .map-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 40px auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+    .fullscreen-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #1a3d2f;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background 0.3s, color 0.3s;
+}
+
+.fullscreen-button:hover {
+  background-color: #a3e635;
+  color: #1a3d2f;
+}
+
   </style>
 </head>
 <body>
@@ -205,6 +230,30 @@
     </div> 
   </div>
 </section>
+
+  <section id="carte-velos">
+  <h2>Carte des falaises accessibles à vélo</h2>
+  <p>Voici une carte interactive des falaises accessibles à vélo autour d’Annecy, pour grimper tout en respectant la nature !</p>
+  <div class="map-container">
+    <iframe 
+      src="https://www.google.com/maps/d/u/0/embed?mid=1wn9y5zuyNF3AzO5rQdQ0xzurGPSExLU&ehbc=2E312F&noprof=1"
+      width="100%" 
+      height="480" 
+      allowfullscreen 
+      loading="lazy" 
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+     <div style="text-align: center; margin-top: 20px;">
+    <a 
+      href="https://www.google.com/maps/d/u/0/embed?mid=1wn9y5zuyNF3AzO5rQdQ0xzurGPSExLU&ehbc=2E312F&noprof=1"
+      target="_blank" 
+      class="fullscreen-button">
+      Voir la carte en plein écran
+    </a>
+  </div>
+</section>
+
   
   <section id="evenement">
     <h2>Clôture du projet – Dimanche 5 octobre 2025</h2>
