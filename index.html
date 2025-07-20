@@ -39,13 +39,13 @@
     font-size: 1.5em;
   }
 .carousel {
-  position: relative;
   width: 100%;
-  max-width: 400px;
+  max-width: 600px;
   margin: 40px auto;
+  position: relative;
   overflow: hidden;
   border-radius: 12px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
 }
 
 .carousel input[type="radio"] {
@@ -73,11 +73,9 @@
 #slide1:checked ~ .slides {
   transform: translateX(0%);
 }
-
 #slide2:checked ~ .slides {
   transform: translateX(-100%);
 }
-
 #slide3:checked ~ .slides {
   transform: translateX(-200%);
 }
@@ -86,15 +84,15 @@
   display: flex;
   justify-content: center;
   gap: 10px;
-  margin-top: 10px;
+  margin-top: 15px;
 }
 
 .nav label {
-  display: inline-block;
-  width: 12px;
-  height: 12px;
+  width: 14px;
+  height: 14px;
   background-color: #ccc;
   border-radius: 50%;
+  display: inline-block;
   cursor: pointer;
   transition: background 0.3s;
 }
@@ -104,6 +102,7 @@
 #slide3:checked ~ .nav label[for="slide3"] {
   background-color: #1a3d2f;
 }
+
 
   .image-block img,
   .carousel,
@@ -361,19 +360,19 @@
     <p> Action 1 / Former et transmettre. Deux stages ont été réalisé l'un avec les enfants du groupe pré-compétitions, tous passionnés par l'escalade et un autre stage pour les adultes. 
       Le but étant de se déplacer en vélo pour grimper et de connaitre mieux la nature qui nous entoure grâce à des spécialistes comme la LPO (ligue de protections des oiseaux). <p>
 
- <div class="carousel">
+<div class="carousel">
   <input type="radio" name="slides" id="slide1" checked>
   <input type="radio" name="slides" id="slide2">
   <input type="radio" name="slides" id="slide3">
 
   <div class="slides">
-    <div class="slide" id="s1">
+    <div class="slide">
       <img src="images/eliamvelo.jpg" alt="Photo 1">
     </div>
-    <div class="slide" id="s2">
+    <div class="slide">
       <img src="images/escalade.jpg" alt="Photo 2">
     </div>
-    <div class="slide" id="s3">
+    <div class="slide">
       <img src="images/LPO.jpg" alt="Photo 3">
     </div>
   </div>
@@ -384,6 +383,7 @@
     <label for="slide3"></label>
   </div>
 </div>
+
 
 </section>
 
